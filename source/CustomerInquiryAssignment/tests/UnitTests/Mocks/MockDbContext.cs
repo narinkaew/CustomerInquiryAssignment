@@ -56,7 +56,7 @@ namespace UnitTests
                         new Transactions()
                         {
                             TransactionDate = new DateTime(2019,7,1, 1,11,11),
-                            Amout = 100, //TODO - change type to double
+                            Amout = 100.11M,
                             CurrencyCode = CurrencyCode.UnitedStates,
                             Status = TransactionStatus.Success
                         }
@@ -73,14 +73,14 @@ namespace UnitTests
                         new Transactions()
                         {
                             TransactionDate = new DateTime(2019,7,2, 2,21,21),
-                            Amout = 201, //TODO - change type to double
+                            Amout = 201.22M,
                             CurrencyCode = CurrencyCode.UnitedStates,
                             Status = TransactionStatus.Success
                         },
                         new Transactions()
                         {
                             TransactionDate = new DateTime(2019,7,2, 2,22,22),
-                            Amout = 202, //TODO - change type to double
+                            Amout = 202.22M,
                             CurrencyCode = CurrencyCode.Thai,
                             Status = TransactionStatus.Failed
                         }
@@ -97,21 +97,21 @@ namespace UnitTests
                         new Transactions()
                         {
                             TransactionDate = new DateTime(2019,7,3, 3,31,31),
-                            Amout = 301, //TODO - change type to double
+                            Amout = 301.33M,
                             CurrencyCode = CurrencyCode.UnitedStates,
                             Status = TransactionStatus.Success
                         },
                         new Transactions()
                         {
                             TransactionDate = new DateTime(2019,7,3, 3,32,32),
-                            Amout = 302, //TODO - change type to double
+                            Amout = 302.33M,
                             CurrencyCode = CurrencyCode.Thai,
                             Status = TransactionStatus.Failed
                         },
                         new Transactions()
                         {
                             TransactionDate = new DateTime(2019,7,3, 3,33,33),
-                            Amout = 303, //TODO - change type to double
+                            Amout = 303.33M,
                             CurrencyCode = CurrencyCode.Japan,
                             Status = TransactionStatus.Canceled
                         }

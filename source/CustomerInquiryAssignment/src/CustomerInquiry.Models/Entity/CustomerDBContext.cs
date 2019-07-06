@@ -49,7 +49,7 @@ namespace CustomerInquiry.Models.Entity
 
                 entity.Property(e => e.CustomerId)
                     .HasColumnName("CustomerID")
-                    .HasColumnType("numeric(10, 0)");
+                    .HasColumnType("decimal(10, 0)");
 
                 entity.Property(e => e.ContactEmail)
                     .IsRequired()
@@ -84,7 +84,7 @@ namespace CustomerInquiry.Models.Entity
 
                 entity.Property(e => e.CustomerId)
                     .HasColumnName("CustomerID")
-                    .HasColumnType("numeric(10, 0)");
+                    .HasColumnType("decimal(10, 0)");
 
                 entity.Property(e => e.Status)
                     .IsRequired()

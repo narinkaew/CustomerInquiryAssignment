@@ -32,7 +32,7 @@ namespace UnitTests
             Assert.Equal("one.transaction@2c2p.com", customerOneTransaction.ContactEmail);
             Assert.NotEmpty(customerOneTransaction.Transactions);
             Assert.Equal(1, customerOneTransaction.Transactions.Count);
-            Assert.Equal(100, customerOneTransaction.Transactions.FirstOrDefault().Amout);
+            Assert.Equal(100.11M, customerOneTransaction.Transactions.FirstOrDefault().Amout);
         }
         
         [Fact(DisplayName = "GetById Mr. Multiple Transaction")]
@@ -50,9 +50,9 @@ namespace UnitTests
             Assert.Equal("multiple.transaction@2c2p.com", customer.ContactEmail);
             Assert.NotEmpty(customer.Transactions);
             Assert.Equal(3, customer.Transactions.Count);
-            Assert.Equal(301, customer.Transactions.ElementAt(0).Amout);
-            Assert.Equal(302, customer.Transactions.ElementAt(1).Amout);
-            Assert.Equal(303, customer.Transactions.ElementAt(2).Amout);
+            Assert.Equal(301.33M, customer.Transactions.ElementAt(0).Amout);
+            Assert.Equal(302.33M, customer.Transactions.ElementAt(1).Amout);
+            Assert.Equal(303.33M, customer.Transactions.ElementAt(2).Amout);
         }
 
         private ICustomerRepository Initial()
