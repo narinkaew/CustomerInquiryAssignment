@@ -1,6 +1,9 @@
 ﻿Scaffold-DbContext -f "Server=.\SQLEXPRESS;Database=CustomerDB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entity
 
-// Use the constructor after generate context.
+----------------------------------------------
+  Use the constructor after generate context.
+----------------------------------------------
+
 private readonly string _connectionString;
 
 public CustomerDBContext(string connectionString)
