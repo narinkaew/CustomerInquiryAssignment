@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CustomerInquiry.Commons\CustomerInquiry.Commons.csproj" />
     <ProjectReference Include="..\CustomerInquiry.Models\CustomerInquiry.Models.csproj" />
   </ItemGroup>
 
