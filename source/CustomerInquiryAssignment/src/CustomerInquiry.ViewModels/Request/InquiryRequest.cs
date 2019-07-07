@@ -2,7 +2,7 @@
 {
     public class InquiryRequest
     {
-        public decimal CustomerID { get; set; }
+        public decimal? CustomerID { get; set; }
         public string Email { get; set; }
     }
 }
