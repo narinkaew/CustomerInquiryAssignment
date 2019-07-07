@@ -34,8 +34,8 @@ namespace CustomerInquiry.Services
                 viewModels.Add(model.Convert());
             }
 
-            // Order by transaction by date
-            viewModels = viewModels.OrderBy(x => x.Date).ToList();
+            // Select last 5 transaction
+            viewModels = viewModels.OrderByDescending(x => x.Date).Take(5).ToList();
 
             // Running transaction id
             viewModels.ForEach(x => x.ID = viewModels.IndexOf(x) + 1);
