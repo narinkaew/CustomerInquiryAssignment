@@ -89,8 +89,8 @@ namespace UnitTests
                 new Customers()
                 {
                     CustomerId = 33333,
-                    CustomerName = "Mr. Multiple Transaction",
-                    ContactEmail = "multiple.transaction@2c2p.com",
+                    CustomerName = "Mr. Many Transaction",
+                    ContactEmail = "many.transaction@2c2p.com",
                     MobileNo = "0831234567",
                     Transactions = new List<Transactions>()
                     {

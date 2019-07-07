@@ -7,6 +7,6 @@ namespace CustomerInquiry.Repositories
     public interface ICustomerRepository
     {
         Task<IEnumerable<Customers>> ListAsync();
-        Task<Customers> GetByIdAndEmail(decimal? customerId, string email);
+        Task<Customers> GetByIdAndEmailAsync(decimal? customerId, string email);
     }
 }

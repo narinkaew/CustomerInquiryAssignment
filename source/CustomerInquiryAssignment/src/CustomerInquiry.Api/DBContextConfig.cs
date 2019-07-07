@@ -15,6 +15,11 @@ namespace CustomerInquiry.Api
                 services.AddDbContext<CustomerDBContext>(options =>
                     options.UseInMemoryDatabase(Guid.NewGuid().ToString()));
             }
+            else if (configuration.GetSection("Environment").Value == "dev")
+            {
+                services.AddDbContext<CustomerDBContext>(options =>
+                    options.UseSqlServer(configuration.GetConnectionString("CustomerConnection")));
+            }
             else
             {
                 services.AddDbContext<CustomerDBContext>(options =>

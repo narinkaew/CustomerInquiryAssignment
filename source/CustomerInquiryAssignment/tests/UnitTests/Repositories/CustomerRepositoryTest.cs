@@ -35,8 +35,8 @@ namespace UnitTests
             Assert.Equal(100.11M, customerOneTransaction.Transactions.FirstOrDefault().Amout);
         }
         
-        [Fact(DisplayName = "GetById Mr. Multiple Transaction")]
-        public async void GetById_MrMultipleTransaction()
+        [Fact(DisplayName = "GetById Mr. Many Transaction")]
+        public async void GetById_MrManyTransaction()
         {
             // arrange
             _customerRepository = Initial();
@@ -44,10 +44,10 @@ namespace UnitTests
             string email = null;
 
             // act
-            var customer = await _customerRepository.GetByIdAndEmail(customerId, email);
+            var customer = await _customerRepository.GetByIdAndEmailAsync(customerId, email);
 
             // assert
-            Assert.Equal("multiple.transaction@2c2p.com", customer.ContactEmail);
+            Assert.Equal("many.transaction@2c2p.com", customer.ContactEmail);
             Assert.NotEmpty(customer.Transactions);
             Assert.Equal(3, customer.Transactions.Count);
             Assert.Equal(301.33M, customer.Transactions.ElementAt(0).Amout);

@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CustomerInquiry.Models\CustomerInquiry.Models.csproj" />
     <ProjectReference Include="..\CustomerInquiry.Repositories\CustomerInquiry.Repositories.csproj" />
+    <ProjectReference Include="..\CustomerInquiry.Services\CustomerInquiry.Services.csproj" />
     <ProjectReference Include="..\CustomerInquiry.ViewModels\CustomerInquiry.ViewModels.csproj" />
   </ItemGroup>
 

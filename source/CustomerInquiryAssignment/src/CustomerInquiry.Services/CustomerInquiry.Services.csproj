@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CustomerInquiry.Repositories\CustomerInquiry.Repositories.csproj" />
+    <ProjectReference Include="..\CustomerInquiry.ViewModels\CustomerInquiry.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

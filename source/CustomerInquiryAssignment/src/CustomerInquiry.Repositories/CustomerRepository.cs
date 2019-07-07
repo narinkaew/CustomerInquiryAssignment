@@ -31,7 +31,7 @@ namespace CustomerInquiry.Repositories
         /// <param name="customerId"></param>
         /// <param name="email"></param>
         /// <returns>Specific customer detail with payment history</returns>
-        public async Task<Customers> GetByIdAndEmail(decimal? customerId, string email)
+        public async Task<Customers> GetByIdAndEmailAsync(decimal? customerId, string email)
         {
             return await _dbContext.Customers.Include(x => x.Transactions)
                             .Where(x =>
