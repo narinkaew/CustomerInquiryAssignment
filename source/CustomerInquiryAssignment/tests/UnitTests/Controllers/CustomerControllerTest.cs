@@ -5,12 +5,15 @@ using CustomerInquiry.Repositories;
 using CustomerInquiry.Services;
 using CustomerInquiry.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Serilog;
 using Xunit;
 
 namespace UnitTests
 {
     public class CustomerControllerTest
     {
+        private readonly ILogger<CustomerController> _logger;
         private readonly CustomerDBContext _dbContext;
         private readonly ICustomerRepository _customerRepository;
         private readonly ICustomerService _customerService;
@@ -18,10 +21,11 @@ namespace UnitTests
 
         public CustomerControllerTest()
         {
+            _logger = new MockLogger<CustomerController>();
             _dbContext = new MockDbContext().DbContext();
             _customerRepository = new CustomerRepository(_dbContext);
             _customerService = new CustomerService(_customerRepository);
-            _customerController = new CustomerController(_customerService);
+            _customerController = new CustomerController(_customerService, _logger);
         }
 
         [Fact]

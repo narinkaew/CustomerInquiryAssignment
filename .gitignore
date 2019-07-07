@@ -264,3 +264,4 @@ pub/
 .eshopdocker_*
 \.vscode/
 /source/Journey/src/Journey.Web.API/logs
+/source/CustomerInquiryAssignment/src/CustomerInquiry.Api/logs
