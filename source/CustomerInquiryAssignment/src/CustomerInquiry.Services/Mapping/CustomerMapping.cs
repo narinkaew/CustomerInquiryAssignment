@@ -50,7 +50,7 @@ namespace CustomerInquiry.Services
 
             return new TransactionResponse()
             {
-                Date = model.TransactionDate.ToString("dd/MM/yyyy HH:mm"),
+                Date = model.TransactionDate,
                 Amount = model.Amout,
                 Currency = model.CurrencyCode,
                 Status = model.Status

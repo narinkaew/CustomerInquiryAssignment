@@ -55,6 +55,11 @@ namespace CustomerInquiry.Api
                 {
                     options.SuppressModelStateInvalidFilter = true;
                 })
+                // Set date format string for json
+                .AddJsonOptions(options =>
+                {
+                    options.SerializerSettings.DateFormatString = "dd/MM/yyyy HH:mm";
+                })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             }
 
