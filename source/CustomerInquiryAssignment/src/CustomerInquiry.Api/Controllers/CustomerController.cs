@@ -16,17 +16,11 @@ namespace CustomerInquiry.Api.Controllers
     public class CustomerController : ControllerBase
     {
         private readonly ICustomerService _customerService;
-        private readonly JsonSerializerSettings _serializerSettings;
         
         // Constructor
         public CustomerController(ICustomerService customerService)
         {
             _customerService = customerService;
-
-            _serializerSettings = new JsonSerializerSettings
-            {
-                Formatting = Formatting.Indented
-            };
         }
 
         [HttpPost]
