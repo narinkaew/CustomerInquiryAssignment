@@ -25,6 +25,12 @@ namespace CustomerInquiry.Repositories
             return await _dbContext.Customers.Include(x => x.Transactions).ToListAsync();
         }
 
+        /// <summary>
+        /// Search customer detail with customerId and/or email
+        /// </summary>
+        /// <param name="customerId"></param>
+        /// <param name="email"></param>
+        /// <returns>Specific customer detail with payment history</returns>
         public async Task<Customers> GetByIdAndEmail(decimal? customerId, string email)
         {
             return await _dbContext.Customers.Include(x => x.Transactions)

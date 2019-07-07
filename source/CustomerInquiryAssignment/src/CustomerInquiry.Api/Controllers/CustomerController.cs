@@ -1,6 +1,11 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using CustomerInquiry.Commons;
 using CustomerInquiry.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Newtonsoft.Json;
 
 namespace CustomerInquiry.Api.Controllers
@@ -21,12 +26,28 @@ namespace CustomerInquiry.Api.Controllers
         }
 
         [HttpPost]
-        [Route("action")]
-        public async Task<InquiryResponse> Inquiry([FromBody] InquiryRequest req)
+        [Route("[action]")]
+        public async Task<IActionResult> Inquiry(InquiryRequest req)
         {
-            var result = new InquiryResponse();
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    IEnumerable<string> allErrors = ModelState.Values.SelectMany(x => x.Errors.Select(y => y.ErrorMessage));
+                    return BadRequest(allErrors);
+                }
 
-            return result;
+                if (!ObjectHelper.IsValidRequest(req))
+                {
+                    return BadRequest(ValidationMessage.NoInquiryCriteria);
+                }
+            }
+            catch(Exception)
+            {
+                return BadRequest();
+            }
+
+            return Ok();
         }
     }
 }
