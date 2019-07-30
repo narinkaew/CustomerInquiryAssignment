@@ -1,4 +1,4 @@
-# Software Architect Technical Assignment
+# Software Architect Technical
 
 ----
 ## Description
